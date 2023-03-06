@@ -1,0 +1,6 @@
+[submodule "src/esp-phillips-3200"]
+	path = src/esp-phillips-3200
+	url = https://github.com/mkorenko/esp-phillips-3200.git
+[submodule "src/esp-firebase-gh"]
+	path = src/esp-firebase-gh
+	url = https://github.com/mkorenko/esp-firebase-gh.git
