@@ -1,0 +1,190 @@
+{
+  "coffee-machine": {
+    "gh_config": {
+      "deviceInfo": {
+        "manufacturer": "Philips",
+        "model": "3200"
+      },
+      "name": {
+        "defaultNames": [
+          "Coffee Machine"
+        ],
+        "name": "Coffee Machine",
+        "nicknames": [
+          "Coffee Machine"
+        ]
+      },
+      "notificationSupportedByAgent": true,
+      "traits": {
+        "Cook": {
+          "foodPresets": [
+            {
+              "food_preset_name": "espresso",
+              "food_synonyms": [
+                {
+                  "lang": "en",
+                  "synonym": [
+                    "espresso",
+                    "single espresso"
+                  ]
+                }
+              ],
+              "supported_units": [
+                "CUPS"
+              ]
+            },
+            {
+              "food_preset_name": "2x_espresso",
+              "food_synonyms": [
+                {
+                  "lang": "en",
+                  "synonym": [
+                    "double espresso"
+                  ]
+                }
+              ],
+              "supported_units": [
+                "CUPS"
+              ]
+            },
+            {
+              "food_preset_name": "coffee",
+              "food_synonyms": [
+                {
+                  "lang": "en",
+                  "synonym": [
+                    "coffee",
+                    "single coffee"
+                  ]
+                }
+              ],
+              "supported_units": [
+                "CUPS"
+              ]
+            },
+            {
+              "food_preset_name": "2x_coffee",
+              "food_synonyms": [
+                {
+                  "lang": "en",
+                  "synonym": [
+                    "double coffee"
+                  ]
+                }
+              ],
+              "supported_units": [
+                "CUPS"
+              ]
+            },
+            {
+              "food_preset_name": "americano",
+              "food_synonyms": [
+                {
+                  "lang": "en",
+                  "synonym": [
+                    "americano",
+                    "single americano"
+                  ]
+                }
+              ],
+              "supported_units": [
+                "CUPS"
+              ]
+            },
+            {
+              "food_preset_name": "2x_americano",
+              "food_synonyms": [
+                {
+                  "lang": "en",
+                  "synonym": [
+                    "double americano"
+                  ]
+                }
+              ],
+              "supported_units": [
+                "CUPS"
+              ]
+            },
+            {
+              "food_preset_name": "cappuccino",
+              "food_synonyms": [
+                {
+                  "lang": "en",
+                  "synonym": [
+                    "cappuccino"
+                  ]
+                }
+              ],
+              "supported_units": [
+                "CUPS"
+              ]
+            },
+            {
+              "food_preset_name": "latte",
+              "food_synonyms": [
+                {
+                  "lang": "en",
+                  "synonym": [
+                    "latte"
+                  ]
+                }
+              ],
+              "supported_units": [
+                "CUPS"
+              ]
+            },
+            {
+              "food_preset_name": "hot_water",
+              "food_synonyms": [
+                {
+                  "lang": "en",
+                  "synonym": [
+                    "hot water"
+                  ]
+                }
+              ],
+              "supported_units": [
+                "CUPS"
+              ]
+            }
+          ],
+          "supportedCookingModes": [
+            "BREW"
+          ]
+        },
+        "OnOff": true,
+        "RunCycle": true
+      },
+      "type": "COFFEE_MAKER",
+      "willReportState": true
+    },
+    "online_at": 0,
+    "power_at": 0,
+    "state": {
+      "brew": "none",
+      "gh_state": {
+        "currentCookingMode": "NONE",
+        "currentCycleRemainingTime": 1,
+        "currentFoodPreset": "NONE",
+        "currentFoodQuantity": 1,
+        "currentFoodUnit": "CUPS",
+        "currentRunCycle": [
+          {
+            "currentCycle": "Off",
+            "lang": "en"
+          }
+        ],
+        "currentTotalRemainingTime": 1,
+        "on": false
+      },
+      "grinder_type": 0,
+      "job_repeat": 0,
+      "machine_status": "off",
+      "milk_level": 0,
+      "power_status": false,
+      "strength_level": 0,
+      "timestamp": 0,
+      "water_level": 0
+    }
+  }
+}
