@@ -6,7 +6,7 @@ void gh_on_device_state_request(
     FirebaseJson *gh_notifications
 ) {
   // custom state
-  state->set("local_ip", machine_local_ip);
+  state->add("local_ip", machine_local_ip);
   state->add("power_status", machine.current_power_status);
   state->add("machine_status", machine.current_machine_status);
   state->add("brew", machine.current_brew);
@@ -177,6 +177,9 @@ inline std::string _gh_get_cycle_label(std::string &machine_status) {
   }
   if (machine_status == "ready") {
     return "Ready";
+  }
+  if (machine_status == "ready_aqua_clean") {
+    return "Ready - check AquaClean";
   }
   return "Unknown";
 }

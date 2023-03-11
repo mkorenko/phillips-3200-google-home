@@ -9,7 +9,7 @@ inline void jobs_schedule_next_action() {
 inline void jobs_loop() {
   if (job_repeat == 0) { return; }
 
-  if (machine.current_machine_status != "ready" &&
+  if (machine.current_machine_status.rfind("ready", 0) != 0 &&
       machine.current_machine_status != "selected") {
     return;
   }
@@ -61,7 +61,7 @@ inline std::string jobs_schedule_job(
     return "deviceTurnedOff";
   }
 
-  if (machine.current_machine_status != "ready" &&
+  if (machine.current_machine_status.rfind("ready", 0) != 0 &&
       machine.current_machine_status != "selected") {
     return "deviceBusy";
   }
