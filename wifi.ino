@@ -1,4 +1,6 @@
 inline void wifi_setup() {
+  WiFi.persistent(false);
+
   WiFi.mode(WIFI_STA);
   WiFi.begin(wifi_ssid, wifi_password);
 
@@ -7,7 +9,6 @@ inline void wifi_setup() {
   }
 
   WiFi.setAutoReconnect(true);
-  WiFi.persistent(true);
 
   machine_local_ip = std::string(WiFi.localIP().toString().c_str());
 
