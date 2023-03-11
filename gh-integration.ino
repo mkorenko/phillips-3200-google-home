@@ -6,6 +6,7 @@ void gh_on_device_state_request(
     FirebaseJson *gh_notifications
 ) {
   // custom state
+  state->set("local_ip", machine_local_ip);
   state->add("power_status", machine.current_power_status);
   state->add("machine_status", machine.current_machine_status);
   state->add("brew", machine.current_brew);

@@ -21,6 +21,8 @@ uint8_t job_strength_level = 0;
 uint8_t job_water_level = 0;
 uint8_t job_milk_level = 0;
 
+std::string machine_local_ip;
+
 void on_machine_state_changed() {
   jobs_schedule_next_action();
   gh_report_device_state();

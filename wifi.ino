@@ -9,6 +9,8 @@ inline void wifi_setup() {
   WiFi.setAutoReconnect(true);
   WiFi.persistent(true);
 
+  machine_local_ip = std::string(WiFi.localIP().toString().c_str());
+
   ArduinoOTA.setPassword(ota_password);
   ArduinoOTA.begin();
 }
