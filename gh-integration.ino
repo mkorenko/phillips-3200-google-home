@@ -1,22 +1,10 @@
 FirebaseEspGh firebase_esp_gh;
 
 void gh_on_device_state_request(
-    FirebaseJson *state,
     FirebaseJson *gh_state,
-    FirebaseJson *gh_notifications
+    FirebaseJson *gh_notifications,
+    FirebaseJson *custom_state
 ) {
-  // custom state
-  state->add("local_ip", machine_local_ip);
-  state->add("power_status", machine.current_power_status);
-  state->add("machine_status", machine.current_machine_status);
-  state->add("brew", machine.current_brew);
-  state->add("strength_level", machine.current_strength_level);
-  state->add("grinder_type", machine.current_grinder_type);
-  state->add("water_level", machine.current_water_level);
-  state->add("milk_level", machine.current_milk_level);
-  state->add("job_repeat", job_repeat);
-  state->set("timestamp/.sv", "timestamp");
-
   // gh state
   gh_state->add("on", machine.current_power_status);
   gh_state->add("currentCookingMode",
@@ -53,6 +41,18 @@ void gh_on_device_state_request(
     notification.add("errorCode", "binFull");
     gh_notifications->add("RunCycle", notification);
   }
+
+  // custom state
+  custom_state->add("local_ip", machine_local_ip);
+  custom_state->add("power_status", machine.current_power_status);
+  custom_state->add("machine_status", machine.current_machine_status);
+  custom_state->add("brew", machine.current_brew);
+  custom_state->add("strength_level", machine.current_strength_level);
+  custom_state->add("grinder_type", machine.current_grinder_type);
+  custom_state->add("water_level", machine.current_water_level);
+  custom_state->add("milk_level", machine.current_milk_level);
+  custom_state->add("job_repeat", job_repeat);
+  custom_state->set("timestamp/.sv", "timestamp");
 }
 
 void gh_on_command(
